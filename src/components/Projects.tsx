@@ -40,24 +40,24 @@ function ProjectImage({
 
 export function Projects() {
   return (
-    <section id="projects" aria-label="Projects" className="bg-surface py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="flex flex-wrap items-end justify-between gap-6">
+    <section id="projects" aria-label="Projects" className="bg-surface py-16 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div className="flex flex-wrap items-end justify-between gap-3">
           <div>
             <p className="font-mono text-xs uppercase tracking-widest text-btc">
               03 — Deployed Network
             </p>
-            <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight md:text-4xl">
+            <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight md:text-4xl">
               Projects
             </h2>
           </div>
-          <span className="inline-flex items-center gap-2 rounded-full border border-btc/40 bg-btc/10 px-3 py-1 font-mono text-xs text-btc">
+          <span className="inline-flex items-center gap-2 rounded-full border border-btc/40 bg-btc/10 px-3 py-1 font-mono text-[11px] text-btc sm:text-xs">
             <span className="h-1.5 w-1.5 rounded-full bg-btc" />
-            Live on mainnet
+            Live
           </span>
         </div>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+        <div className="mt-8 space-y-4 md:mt-12 md:grid md:grid-cols-2 md:gap-5 md:space-y-0 lg:grid-cols-3">
           {projects.map((project, i) => (
             <article
               key={project.title}
@@ -77,32 +77,32 @@ export function Projects() {
                     fallback={project.title.split(" ").map((w) => w[0]).join(" ")}
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-void/90 to-transparent" />
-                  <p className="absolute left-4 top-4 rounded-full border border-white/20 bg-black/50 px-3 py-1 font-mono text-xs text-white backdrop-blur-sm">
+                  <p className="absolute left-3 top-3 rounded-full border border-white/20 bg-black/50 px-2.5 py-0.5 font-mono text-[11px] text-white backdrop-blur-sm md:left-4 md:top-4 md:px-3 md:py-1 md:text-xs">
                     {String(i + 1).padStart(2, "0")}
                   </p>
-                  <span className="absolute bottom-4 right-4 inline-flex items-center gap-1 font-mono text-xs text-btc opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <span className="absolute bottom-3 right-3 inline-flex items-center gap-1 font-mono text-[11px] text-btc opacity-0 transition-opacity duration-300 group-hover:opacity-100 md:bottom-4 md:right-4 md:text-xs">
                     Visit <ExternalLink size={14} />
                   </span>
                 </div>
 
-                <div className="flex flex-1 flex-col p-6">
+                <div className="flex flex-1 flex-col p-4 md:p-6">
                   <div className="flex items-center justify-between">
-                    <h3 className="font-heading text-xl font-semibold text-white">
+                    <h3 className="font-heading text-lg font-semibold text-white md:text-xl">
                       {project.title}
                     </h3>
                     <ArrowUpRight
-                      size={20}
+                      size={18}
                       className="text-btc transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                     />
                   </div>
-                  <p className="mt-3 flex-1 font-body text-sm leading-relaxed text-stardust">
+                  <p className="mt-2.5 flex-1 font-body text-sm leading-relaxed text-stardust md:mt-3">
                     {project.description}
                   </p>
-                  <ul className="mt-5 flex flex-wrap gap-2" aria-label="Tech stack">
+                  <ul className="mt-4 flex flex-wrap gap-1.5 md:mt-5 md:gap-2" aria-label="Tech stack">
                     {project.tags.map((tag) => (
                       <li
                         key={tag}
-                        className="rounded-full border border-btc/40 bg-btc/10 px-3 py-1 font-mono text-xs text-btc"
+                        className="rounded-full border border-btc/40 bg-btc/10 px-2.5 py-0.5 font-mono text-[11px] text-btc md:px-3 md:py-1 md:text-xs"
                       >
                         {tag}
                       </li>

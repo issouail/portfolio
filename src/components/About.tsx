@@ -20,31 +20,33 @@ const highlights = [
 
 export function About() {
   return (
-    <section id="about" aria-label="About" className="bg-surface py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-12">
+    <section id="about" aria-label="About" className="bg-surface py-16 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-5">
             <p className="font-mono text-xs uppercase tracking-widest text-btc">
               01 — Overview
             </p>
-            <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight md:text-4xl">
+            <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight md:text-4xl">
               About
             </h2>
-            <div className="mt-6 h-px w-16 bg-gradient-btc" />
+            <div className="mt-5 h-px w-14 bg-gradient-btc lg:w-16" />
 
-            <div className="mt-8 grid gap-4 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+            <div className="mt-6 grid grid-cols-3 gap-2.5 lg:mt-8 lg:grid-cols-1 lg:gap-4 xl:grid-cols-3">
               {highlights.map(({ label, value, Icon }) => (
                 <div
                   key={label}
-                  className="rounded-2xl border border-white/10 bg-void/60 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-btc/50 hover:shadow-glow-orange"
+                  className="rounded-xl border border-white/10 bg-void/60 p-3 text-center transition-all duration-300 hover:-translate-y-1 hover:border-btc/50 hover:shadow-glow-orange lg:rounded-2xl lg:p-5 lg:text-left"
                 >
-                  <div className="mb-3 inline-flex rounded-lg border border-btc/50 bg-btc/10 p-2.5">
-                    <Icon size={18} className="text-btc" />
+                  <div className="mx-auto mb-2 inline-flex rounded-lg border border-btc/50 bg-btc/10 p-2 lg:mb-3 lg:p-2.5">
+                    <Icon size={16} className="text-btc" />
                   </div>
-                  <p className="font-heading text-2xl font-semibold text-gradient-btc">
+                  <p className="font-heading text-lg font-semibold text-gradient-btc lg:text-2xl">
                     {value}
                   </p>
-                  <p className="mt-1 font-mono text-xs text-stardust">{label}</p>
+                  <p className="mt-0.5 font-mono text-[10px] text-stardust lg:mt-1 lg:text-xs">
+                    {label}
+                  </p>
                 </div>
               ))}
             </div>
