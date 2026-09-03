@@ -179,3 +179,4 @@ portfolio/
 
 Personal use. Replace all placeholder links, images, and personal references
 with the candidate's actual information before publishing.
+
